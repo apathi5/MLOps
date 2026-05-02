@@ -1,2 +1,4 @@
 Git commands
 git switch -c master
+git config --global user.email "anuritha.p@gmail.com"
+git config --global user.name "Shyama"
