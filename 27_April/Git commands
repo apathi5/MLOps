@@ -1,10 +1,15 @@
 Git commands
+git init
 git switch -c master
 git config --global user.email "anuritha.p@gmail.com"
 git config --global user.name "Shyama"
 git add .
 git push origin master
 git commit -m "comment"
+
+DVC:Large files. Model, training datasets, output datasets.
+dvc add
+dvc checkout
 
 %%writefile app.py
 !python app.py
