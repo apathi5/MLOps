@@ -10,6 +10,12 @@ git commit -m "comment"
 DVC:Large files. Model, training datasets, output datasets.
 dvc add
 dvc checkout
+dvc remote add gcsremote gd://mlops-dcs-datasets
+gcloud auth application-default login
+dvc pull
+dvc list .
+dvc remote default gcsremote
+dvc push -r gcsremote 
 
 %%writefile app.py
 !python app.py
@@ -33,3 +39,6 @@ Terminal2: npx localtunnel --port 8000
 Pytest:
 pip -q install pytest pytest-sugar
 !python -m pytest test_math.py
+
+
+MLFLOW:
